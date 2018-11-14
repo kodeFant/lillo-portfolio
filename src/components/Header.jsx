@@ -55,14 +55,16 @@ const Header = () => (
     <Description>
       <div>
         <p>
-          Jeg er en blid webutvikler som lager nettsider i JavaScript og PHP .
+          Jeg er en kompetent og medgjørlig webutvikler som lager nettsider med
+          JavaScript og PHP.
         </p>
         <p>
           Ønsker du å jobbe med en som har fått jobben gjort gang på gang? Og
-          ikke bare nødvendigvis innen koding ?
+          ikke bare nødvendigvis innen programmering?
         </p>
         <p>
-          Jeg har bakgrunn som kommunikasjonsrådigver i{" "}
+          I tillegg til webutvikling, har jeg fem års fartstid som
+          kommunikasjonsrådigver i{" "}
           <a
             href="https://www.norad.no"
             target="_blank"
