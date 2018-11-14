@@ -173,7 +173,10 @@ const BGImage = styled.div`
 `;
 
 const ItemTitle = styled.h2`
-  ${tw('text-white text-3xl mb-4')};
+  ${tw('text-white text-xl mb-4')};
+  @media (min-width: 576px) {
+    ${tw('text-white text-3xl mb-4')};
+  }
 `;
 
 const Gradient = styled.div`
@@ -202,8 +205,11 @@ const SelectWrapper = styled.div`
 const Grid = styled.div`
   ${tw('py-12')};
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 30px;
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
 `;
 
 class Index extends Component {
