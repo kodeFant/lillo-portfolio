@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteTitle: 'Lars Lillo Ulvestad - JavaScript og WordPress',
-    siteUrl: 'https://gatsby-starter-portfolio.netlify.com',
+    siteUrl: 'https://lillo.tech',
   },
   plugins: [
     'gatsby-plugin-emotion',

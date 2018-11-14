@@ -22,8 +22,8 @@ const Social = styled.section`
 
 const Button = styled(OutboundLink)`
   ${tw(
-  'cursor-pointer text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full no-underline shadow-md focus:outline-none focus:shadow-outline'
-)};
+    'cursor-pointer text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full no-underline shadow-md focus:outline-none focus:shadow-outline'
+  )};
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: translateY(-1px);
@@ -42,37 +42,51 @@ const Twitter = styled(Button)`
   ${tw('bg-blue text-white')};
 `;
 
-const Header = () => {
-  return (
-    <Intro>
-      <Title>
-        Hi
+const LinkedIn = styled(Button)`
+  ${tw('bg-blue-light text-white  sm:mx-4 my-4 sm:my-0')};
+`;
+
+const Header = () => (
+  <Intro>
+    <Title>
+      Lars Lillo Ulvestad -<span> Portefølje</span>
+    </Title>
+    <Description>
+      <p>
+        Hei. Jeg heter <span>Lars Lillo Ulvestad.</span>
+        <br />
+        Jeg er webutvikler og lager nettsider i JavaScript og PHP
         <span>.</span>
-      </Title>
-      <Description>
-        <p>
-          I'm LekoArts and I create starters for Gatsby.js
-          <span>.</span> <br />
-          If you're a designer (and front-end developer) like me or a photographer you'll enjoy my Gatsby projects
-          as those two groups are the target audience
-          <span>.</span> You can bootstrap your personal project quick & easy with my minimalistic and fast
-          starters
-          <span>.</span>
-        </p>
-      </Description>
-      <Social>
-        <Homepage role="button" href="https://www.lekoarts.de">
-          Homepage
-        </Homepage>
-        <GitHub role="button" href="https://github.com/LeKoArts">
-          GitHub
-        </GitHub>
-        <Twitter role="button" href="https://twitter.com/lekoarts_de">
-          Twitter
-        </Twitter>
-      </Social>
-    </Intro>
-  );
-};
+        <br />
+        Jeg er er en lagspiller og deler gladelig kunnskap og entusiasme for vårt samarbeid
+        <span>.</span>
+        <br />
+        Jeg har bakgrunn som kommunikasjonsrådigver og webjournalist i henholdsvis{' '}
+        <a href="https://www.norad.no" target="_blank" rel="noopener noreferrer">
+          Norad
+        </a>{' '}
+        og{' '}
+        <a href="https://www.norad.no" target="_blank" rel="noopener noreferrer">
+          Teknisk Ukeblad
+        </a>{' '}
+        <span>.</span>
+      </p>
+    </Description>
+    <Social>
+      <Homepage role="button" href="https://www.kodefant.no">
+        Nettside
+      </Homepage>
+      <GitHub role="button" href="https://github.com/kodeFant">
+        GitHub
+      </GitHub>
+      <Twitter role="button" href="https://twitter.com/larsparsfromage">
+        Twitter
+      </Twitter>
+      <LinkedIn role="button" href="https://www.linkedin.com/in/larslilloulvestad/">
+        LinkedIn
+      </LinkedIn>
+    </Social>
+  </Intro>
+);
 
 export default Header;

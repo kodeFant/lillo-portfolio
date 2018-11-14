@@ -10,8 +10,6 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import 'typeface-montserrat';
-import Content from '../components/Content';
-import Description from '../components/Description';
 import Header from '../components/Header';
 import favicon from '../favicon.png';
 import rightArrow from '../right-arrow.svg';
@@ -27,7 +25,7 @@ injectGlobal`
     background-color: #f6993f;
   }
   html {
-    background: #6574cd;
+    background: orange;
     border: 0;
     margin: 0;
     font-size: 18px;
@@ -45,7 +43,7 @@ injectGlobal`
     color: white;
     padding: .75rem 1rem;
     border-radius: .25rem;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'%3E%3Cpolygon points='0,0 100,0 50,50'/%3E%3C/svg%3E") #7886d7 no-repeat 98% 77%;
+    background: url(https://www.transparenttextures.com/patterns/45-degree-fabric-light.png) #7886d7 no-repeat 98% 77%;
     background-size: 25px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
     &:focus {
@@ -69,9 +67,7 @@ const Page = styled.div`
   ${tw(
     'text-white font-sans p-0 m-0 bg-indigo-darker antialiased border-8 sm:border-16 border-solid border-indigo leading-normal relative'
   )};
-  background: #191e38
-    url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%232f365f' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
-  min-height: calc(100vh - 16px);
+  background: #191e38 url(https://www.transparenttextures.com/patterns/dark-denim.png);
   @media (min-width: 576px) {
     min-height: calc(100vh - 32px);
   }
@@ -189,14 +185,14 @@ const SelectWrapper = styled.div`
 const Grid = styled.div`
   ${tw('py-12')};
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 30px;
 `;
 
 class Index extends Component {
   state = {
     name: '[DIRECTORY_NAME]',
-    url: '[GITHUB_REPO_URL]',
+    url: '[GITHUB_REPO_URL]'
   };
 
   selectChange = event => {
@@ -247,7 +243,7 @@ class Index extends Component {
         <Page>
           <Header />
           <SliderWrapper>
-            <Heading>Overview</Heading>
+            <Heading>Prosjekter</Heading>
             <Grid>
               {edges.map(site => {
                 const { id, title, description, preview, features, cover, url } = site.node;
@@ -256,7 +252,7 @@ class Index extends Component {
                     <ItemContent>
                       <Top>
                         <Preview href={preview}>
-                          Preview <img src={rightArrow} alt="Arrow" aria-hidden="true" />
+                          Besøk <img src={rightArrow} alt="Arrow" aria-hidden="true" />
                         </Preview>
                         <Repo href={url}>
                           <img src={github} alt="Arrow" aria-hidden="true" /> GitHub
@@ -278,54 +274,8 @@ class Index extends Component {
               })}
             </Grid>
           </SliderWrapper>
-          <Content>
-            <Heading>Getting started</Heading>
-            <Description>
-              <p>
-                Make sure that you have <a href="https://nodejs.org/en/">Node.js</a> and{' '}
-                <a href="https://github.com/nodejs/node-gyp#installation">node-gyp</a> installed on your system. In
-                order to clone and use the starters you first have to install the{' '}
-                <a href="https://www.gatsbyjs.org/docs/">Gatsby CLI</a>.
-              </p>
-            </Description>
-            <Description long>
-              <pre>
-                <code>
-                  <span>npm install</span> --global gatsby-cli
-                </code>
-              </pre>
-              <h3>Choose one of the starters and install it!</h3>
-              <SelectWrapper>
-                <select onChange={e => this.selectChange(e)}>
-                  <option data-name="[DIRECTORY_NAME]" data-url="[GITHUB_REPO_URL]">
-                    ---
-                  </option>
-                  {edges.map(site => {
-                    const { id, url, name, title } = site.node;
-                    return (
-                      <option key={id} data-name={name} data-url={url}>
-                        {title}
-                      </option>
-                    );
-                  })}
-                </select>
-                <pre>
-                  <code>
-                    <span>gatsby new</span> <i>{name}</i> {url}
-                  </code>
-                </pre>
-              </SelectWrapper>
-              <p>Go into the newly created directory and start the development server:</p>
-              <pre>
-                <code>
-                  <span>gatsby develop</span>
-                </code>
-              </pre>
-            </Description>
-          </Content>
           <Footer>
-            Design by <OutboundLink href="https://www.lekoarts.de">LekoArts</OutboundLink>.{' '}
-            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Source</OutboundLink>.
+            Created by <OutboundLink href="https://kodefant.no">kodeFant</OutboundLink>.{' '}
           </Footer>
         </Page>
       </React.Fragment>
@@ -360,7 +310,7 @@ export const overviewQuery = graphql`
           features
           cover {
             childImageSharp {
-              fluid(maxWidth: 350) {
+              fluid(maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

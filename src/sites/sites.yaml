@@ -1,58 +1,31 @@
-- title: 'Emma'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-emma'
-  name: 'portfolio-emma'
-  preview: 'https://portfolio-emma.netlify.com/'
-  description: 'Full-width grid with large images and a light theme'
-  cover: './emma.jpg'
+- title: "Din Restaurant"
+  url: "https://github.com/kodeFant/kodefant-mat"
+  name: "portfolio-restaurant"
+  preview: "https://restaurant.drifterstage.com/"
+  description: "Demonstrasjon av restaurantside. Bygget på et HTML-design gjenoppbygget i React."
+  cover: "./restaurant.jpg"
   features:
-    - CSS Grid
-    - Emotion
-- title: 'Emilia'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-emilia'
-  name: 'portfolio-emilia'
-  preview: 'https://portfolio-emilia.netlify.com/'
-  description: 'A dark themed One-Page layout with an image grid'
-  cover: './emilia.jpg'
+    - GatsbyJS
+    - React
+    - Datafiltrering
+    - Bildekarusell
+    - RECAPTCHA
+- title: "Din eiendomsmegler"
+  url: "https://github.com/kodeFant/kodefant-eiendom"
+  name: "portfolio-emilia"
+  preview: "https://eiendom.drifterstage.com"
+  description: "A dark themed One-Page layout with an image grid"
+  cover: "./emilia.jpg"
   features:
     - React Overdrive
     - CSS Grid
     - Emotion
-- title: 'Bella'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-bella'
-  name: 'portfolio-bella'
-  preview: 'https://portfolio-bella.netlify.com/'
-  description: 'A bright single-page portfolio powered by Prismic'
-  cover: './bella.jpg'
+- title: "kodeFant"
+  url: "https://github.com/kodeFant/kodefantno_trellis"
+  name: "portfolio-bella"
+  preview: "https://kodefant.no"
+  description: "Et bloggnettsted om webutvikling og kommunikasjon"
+  cover: "./bella.jpg"
   features:
     - Prismic.io
     - Emotion
-- title: 'Cara'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-cara'
-  name: 'portfolio-cara'
-  preview: 'https://portfolio-cara.netlify.com/'
-  description: 'Playful & Colorful One-Page website with Parallax effect'
-  cover: './cara.jpg'
-  features:
-    - TailwindCSS
-    - React Spring
-    - Emotion
-- title: 'Minimal Blog'
-  url: 'https://github.com/LekoArts/gatsby-starter-minimal-blog'
-  name: 'minimal-blog'
-  preview: 'https://minimal-blog.netlify.com/'
-  description: 'Minimal blog focused on the content'
-  cover: './minimal.jpg'
-  features:
-    - Styled Components
-    - Markdown
-- title: 'Prismic'
-  url: 'https://github.com/LekoArts/gatsby-starter-prismic'
-  name: 'prismic'
-  preview: 'https://gatsby-starter-prismic.netlify.com/'
-  description: 'Typography-heavy & light-themed starter powered by Prismic'
-  cover: './prismic.jpg'
-  features:
-    - Prismic.io
-    - Emotion
-    - Gatsby-Image
-    - PrismJS
