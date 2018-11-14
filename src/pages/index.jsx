@@ -275,7 +275,7 @@ class Index extends Component {
             </Grid>
           </SliderWrapper>
           <Footer>
-            Created by <OutboundLink href="https://kodefant.no">kodeFant</OutboundLink>.{' '}
+            Kodet av <OutboundLink href="https://kodefant.no">kodeFant</OutboundLink>.{' '}
           </Footer>
         </Page>
       </React.Fragment>
@@ -310,7 +310,7 @@ export const overviewQuery = graphql`
           features
           cover {
             childImageSharp {
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 1200) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

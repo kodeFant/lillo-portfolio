@@ -2,7 +2,7 @@
   url: "https://github.com/kodeFant/kodefant-mat"
   name: "portfolio-restaurant"
   preview: "https://restaurant.drifterstage.com/"
-  description: "Demonstrasjon av restaurantside. Bygget på et HTML-design gjenoppbygget i React."
+  description: "Demonstrasjon av restaurantside. Bygget på en HTML-mal. Nappet ut jQuery og gjenoppbygget i React."
   cover: "./restaurant.jpg"
   features:
     - GatsbyJS
@@ -14,18 +14,16 @@
   url: "https://github.com/kodeFant/kodefant-eiendom"
   name: "portfolio-emilia"
   preview: "https://eiendom.drifterstage.com"
-  description: "A dark themed One-Page layout with an image grid"
-  cover: "./emilia.jpg"
+  description: "En eiendomsmeglerside som bygger på design fra en Photoshop-mal fra en profesjonell designer."
+  cover: "./eiendom.jpg"
   features:
-    - React Overdrive
     - CSS Grid
-    - Emotion
 - title: "kodeFant"
   url: "https://github.com/kodeFant/kodefantno_trellis"
   name: "portfolio-bella"
   preview: "https://kodefant.no"
-  description: "Et bloggnettsted om webutvikling og kommunikasjon"
-  cover: "./bella.jpg"
+  description: "Et nettsted om webutvikling og kommunikasjon."
+  cover: "./kodefant.jpg"
   features:
-    - Prismic.io
-    - Emotion
+    - WordPress
+    - Root stack
