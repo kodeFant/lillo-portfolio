@@ -17,6 +17,9 @@
   description: "En eiendomsmeglerside som bygger på design fra en Photoshop-mal fra en profesjonell designer."
   cover: "./eiendom.jpg"
   features:
+    - React
+    - GatsbyJS
+    - Flexbox
     - CSS Grid
 - title: "kodeFant"
   url: "https://github.com/kodeFant/kodefantno_trellis"
@@ -26,4 +29,5 @@
   cover: "./kodefant.jpg"
   features:
     - WordPress
-    - Root stack
+    - Roots stack
+    - Sage 9 webpack starter theme

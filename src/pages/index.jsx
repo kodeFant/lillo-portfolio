@@ -43,7 +43,7 @@ injectGlobal`
     color: white;
     padding: .75rem 1rem;
     border-radius: .25rem;
-    background: url(https://www.transparenttextures.com/patterns/45-degree-fabric-light.png) #7886d7 no-repeat 98% 77%;
+    background: url(https://www.transparenttextures.com/patterns/45-degree-fabric-light.png) #7886d7;
     background-size: 25px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
     &:focus {
@@ -106,6 +106,23 @@ const Bottom = styled.div`
 
 const Preview = styled(OutboundLink)`
   ${tw('text-white inline-block text-xl relative mb-0 py-1 tracking-wide no-underline uppercase')};
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover {
+    img {
+      transform: translateX(10px);
+    }
+  }
+`;
+
+const PreviewTitle = styled(OutboundLink)`
+  ${tw('text-white inline-block relative mb-0 py-1 tracking-wide no-underline')};
   img {
     width: 18px;
     height: 18px;
@@ -219,24 +236,24 @@ class Index extends Component {
           <title>{siteMetadata.siteTitle}</title>
           <meta
             name="description"
-            content="Gatsby.js Starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
+            content="Web-portefølje for Lars Lillo Ulvestad, webutvikler spesialisert i JavaScript og WordPress."
           />
           <meta name="image" content={favicon} />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="lekoarts.de" />
-          <meta property="og:url" content="https://gatsby-starter-portfolio.netlify.com" />
-          <meta property="og:title" content="Gatsby Starter Portfolio Overview by LekoArts" />
+          <meta property="og:site_name" content="lillo.tech" />
+          <meta property="og:url" content="https://lillo.tech" />
+          <meta property="og:title" content="Portefølje for webutvikler Lars Lillo Ulvestad" />
           <meta
             property="og:description"
-            content="Gatsby.js starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
+            content="Web-portefølje for Lars Lillo Ulvestad, webutvikler spesialisert i JavaScript og WordPress."
           />
           <meta property="og:image" content={favicon} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="@lekoarts.de" />
-          <meta name="twitter:title" content="Gatsby Starter Portfolio Overview by LekoArts" />
+          <meta name="twitter:creator" content="@larsparsfromage" />
+          <meta name="twitter:title" content="Portefølje for webutvikler Lars Lillo Ulvestad" />
           <meta
             name="twitter:description"
-            content="Gatsby.js starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
+            content="Web-portefølje for Lars Lillo Ulvestad, webutvikler spesialisert i JavaScript og WordPress."
           />
           <meta name="twitter:image" content={favicon} />
         </Helmet>
@@ -260,7 +277,9 @@ class Index extends Component {
                         <Desc>{description}</Desc>
                       </Top>
                       <Bottom>
-                        <ItemTitle>{title}</ItemTitle>
+                        <PreviewTitle href={preview}>
+                          <ItemTitle>{title}</ItemTitle>
+                        </PreviewTitle>
                         <Divider />
                         <FeaturesWrapper>{features.join(', ')}</FeaturesWrapper>
                       </Bottom>

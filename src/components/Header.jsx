@@ -1,28 +1,30 @@
 /* global tw */
-import React from "react";
-import styled from "react-emotion";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
-import Content from "./Content";
-import Description from "./Description";
+import React from 'react';
+import styled from 'react-emotion';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { StaticQuery, graphql } from 'gatsby';
+
+import Content from './Content';
+import Description from './Description';
 
 const Intro = styled(Content)`
-  ${tw("py-8 md:py-16")};
+  ${tw('py-8 md:py-16')};
 `;
 
 const Title = styled.h1`
-  ${tw("text-3xl md:text-5xl")};
+  ${tw('text-3xl md:text-5xl')};
   span {
-    ${tw("text-orange")};
+    ${tw('text-orange')};
   }
 `;
 
 const Social = styled.section`
-  ${tw("flex flex-wrap items-center justify-center sm:justify-start mt-8")};
+  ${tw('flex flex-wrap items-center justify-center sm:justify-start mt-8')};
 `;
 
 const Button = styled(OutboundLink)`
   ${tw(
-    "cursor-pointer text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full no-underline shadow-md focus:outline-none focus:shadow-outline"
+    'cursor-pointer text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full no-underline shadow-md focus:outline-none focus:shadow-outline'
   )};
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -31,19 +33,19 @@ const Button = styled(OutboundLink)`
 `;
 
 const Homepage = styled(Button)`
-  ${tw("bg-indigo text-white")};
+  ${tw('bg-indigo text-white')};
 `;
 
 const GitHub = styled(Button)`
-  ${tw("bg-grey-dark text-white sm:mx-4 my-4 sm:my-0")};
+  ${tw('bg-grey-dark text-white sm:mx-4 my-4 sm:my-0')};
 `;
 
 const Twitter = styled(Button)`
-  ${tw("bg-blue text-white")};
+  ${tw('bg-blue text-white')};
 `;
 
 const LinkedIn = styled(Button)`
-  ${tw("bg-blue-light text-white  sm:mx-4 my-4 sm:my-0")};
+  ${tw('bg-blue-light text-white  sm:mx-4 my-4 sm:my-0')};
 `;
 
 const Header = () => (
@@ -52,40 +54,28 @@ const Header = () => (
       Lars Lillo Ulvestad -<span> Portefølje</span>
     </Title>
     <Description>
-      <p>
-        Hei. Jeg heter <span>Lars Lillo Ulvestad.</span>
-      </p>
-      <p>
-        <p />
-        Jeg er webutvikler og lager nettsider i JavaScript og PHP
-        <span>.</span>
-      </p>
-      <p>
-        Jeg er er en lagspiller og deler gladelig kunnskap og entusiasme for
-        vårt samarbeid
-        <span>.</span>
-      </p>
-      <p>
-        Jeg har bakgrunn som kommunikasjonsrådigver og webjournalist i
-        henholdsvis{" "}
-        <a
-          href="https://www.norad.no"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Norad
-        </a>{" "}
-        og{" "}
-        <a
-          href="https://www.norad.no"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Teknisk Ukeblad
-        </a>{" "}
-        <span>.</span>
-      </p>
-    </Description>
+      <div>
+        <p>
+          Jeg er en blid webutvikler som lager nettsider i JavaScript og PHP
+          <span>.</span>
+        </p>
+        <p>
+          En lagspiller med godt humør som er endringsvilklig når det kreves
+          <span>.</span>
+        </p>
+        <p>
+          Jeg har bakgrunn som kommunikasjonsrådigver og webjournalist i henholdsvis{' '}
+          <a href="https://www.norad.no" target="_blank" rel="noopener noreferrer">
+            Norad
+          </a>{' '}
+          og{' '}
+          <a href="https://www.norad.no" target="_blank" rel="noopener noreferrer">
+            Teknisk Ukeblad
+          </a>{' '}
+          <span>.</span>
+        </p>
+      </div>
+    </Description>{' '}
     <Social>
       <Homepage role="button" href="https://www.kodefant.no">
         Nettside
@@ -96,10 +86,7 @@ const Header = () => (
       <Twitter role="button" href="https://twitter.com/larsparsfromage">
         Twitter
       </Twitter>
-      <LinkedIn
-        role="button"
-        href="https://www.linkedin.com/in/larslilloulvestad/"
-      >
+      <LinkedIn role="button" href="https://www.linkedin.com/in/larslilloulvestad/">
         LinkedIn
       </LinkedIn>
     </Social>
