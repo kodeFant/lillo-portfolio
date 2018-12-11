@@ -1,19 +1,7 @@
-- title: "Din Restaurant"
-  url: "https://github.com/kodeFant/kodefant-mat"
-  name: "portfolio-restaurant"
-  preview: "https://restaurant.drifterstage.com/"
-  description: "Demonstrasjon av restaurantside. Bygget på en HTML-mal. Nappet ut jQuery og gjenoppbygget i React."
-  cover: "./restaurant.jpg"
-  features:
-    - GatsbyJS
-    - React
-    - Datafiltrering
-    - Bildekarusell
-    - RECAPTCHA
 - title: "Din eiendomsmegler"
   url: "https://github.com/kodeFant/kodefant-eiendom"
-  name: "portfolio-emilia"
-  preview: "https://eiendom.drifterstage.com"
+  name: "portfolio-realestate"
+  preview: "https://eiendom.lillo.tech"
   description: "En eiendomsmeglerside som bygger på design fra en Photoshop-mal fra en profesjonell designer."
   cover: "./eiendom.jpg"
   features:
@@ -21,13 +9,58 @@
     - GatsbyJS
     - Flexbox
     - CSS Grid
+    - Søk
+    - Filtrering
+    - Sortering
+    - CSS-moduler
+- title: "Din Restaurant"
+  url: "https://github.com/kodeFant/kodefant-mat"
+  name: "portfolio-restaurant"
+  preview: "https://restaurant.lillo.tech/"
+  description: "Demonstrasjon av restaurantside. Bygget på en HTML-mal. Nappet ut jQuery og gjenoppbygget i React."
+  cover: "./restaurant.jpg"
+  features:
+    - GatsbyJS
+    - React
+    - Filtrering
+    - Bildekarusell
+    - RECAPTCHA
 - title: "kodeFant"
   url: "https://github.com/kodeFant/kodefantno_trellis"
-  name: "portfolio-bella"
+  name: "portfolio-kodefantno"
   preview: "https://kodefant.no"
   description: "Et nettsted om webutvikling og kommunikasjon."
   cover: "./kodefant.jpg"
   features:
     - WordPress
-    - Roots stack
-    - Sage 9 webpack starter theme
+    - Trellis
+    - Bedrock
+    - Sage 9 med webpack
+    - SCSS
+- title: "Norad: Fremtidens ekstremfattigdom"
+  name: "portfolio-highmaps"
+  preview: "https://norad.no/aktuelt/nyheter/2018/31-land-vil-avgjore-kampen-mot-fattigdom/"
+  description: "Interaktiv presentasjon av land med høy risiko for ekstremfattigdom i 2030. Basert på data fra Brookings Institute. Visualisert med interaktivt kart i JavaScript."
+  cover: "./offtrack.jpg"
+  features:
+    - JavaScript
+    - HighMapsJS
+- title: "Norad: Nordmenns holdninger til bistand"
+  name: "portfolio-charts"
+  preview: "https://norad.no/aktuelt/nyheter/2018/ni-av-ti-nordmenn-er-for-bistand/"
+  description: "Tall fra Statistisk Sentralbyrå viser at det norske folket er positive til bistand. Tallene er visualisert med interaktive grafer i JavaScript."
+  cover: "./bistandssb.jpg"
+  features:
+    - JavaScript
+    - HighCharts
+- title: "Tabber.tech"
+  name: "portfolio-tabber"
+  preview: "https://tabber.tech"
+  description: "Minimal Viable Product under utvikling: En bokmerkeapp utviklet med Laravel og React. Med registrering, autentisering og personlige data. Lar brukere legge til, slette og oppdatere egne bokmerker. Lenkene er kategoriserbare og sorteres etter de mest brukte."
+  cover: "./tabbertech.jpg"
+  features:
+    - React
+    - Redux
+    - Laravel
+    - PHP
+    - MySQL

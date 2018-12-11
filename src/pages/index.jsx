@@ -258,10 +258,12 @@ class Index extends Component {
                             aria-hidden="true"
                           />
                         </Preview>
-                        <Repo href={url}>
-                          <img src={github} alt="Arrow" aria-hidden="true" />{" "}
-                          GitHub
-                        </Repo>
+                        {url ? (
+                          <Repo href={url}>
+                            <img src={github} alt="Arrow" aria-hidden="true" />{" "}
+                            GitHub
+                          </Repo>
+                        ) : null}
                         <Desc>{description}</Desc>
                       </Top>
                       <Bottom>
